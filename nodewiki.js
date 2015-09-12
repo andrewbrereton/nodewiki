@@ -46,7 +46,7 @@ while ((option = parser.getopt()) !== undefined) {
 			break;
 
 		case 'l':
-			if (listenAddr != "") {
+			if (listenAddr !== "") {
 				console.log("ERROR: Conflicting use of --addr and --local.\n",
 					"Use only one.");
 				process.exit(1);
@@ -134,7 +134,7 @@ io.sockets.on('connection', function (socket) {
 
 	var dirFolders = []; // array to hold the names of all folders in current directory
 	dir.forEach(function (i) {
-		if (i.folder == true) {
+		if (i.folder === true) {
 			dirFolders.push(i.name);
 		}
 	});
@@ -176,7 +176,7 @@ io.sockets.on('connection', function (socket) {
 			links = getDir.parseLinks(dir, directoryDepth);
 			mdserver.readFolder(links, socket);
 		}
-	})
+	});
 
 	socket.on('refreshNav', function () {
 		refreshNavLinks();
@@ -204,7 +204,7 @@ io.sockets.on('connection', function (socket) {
 		dir = getDir.getDir(currentPath);
 		if (typeof dir != 'undefined') {
 			dir.forEach(function (i) {
-				if (i.folder == true) {
+				if (i.folder === true) {
 					dirFolders.push(i.name);
 				}
 			});
@@ -212,10 +212,10 @@ io.sockets.on('connection', function (socket) {
 	}
 
 });
-if (exports.gitMode == true) {
+if (exports.gitMode === true) {
 	console.log('Using git mode.');
 }
-if (listenAddr != "") {
+if (listenAddr !== "") {
 	console.log("server started, addr:port = %s:%s", listenAddr, portNumber);
 } else {
 	console.log("server started, port = " + portNumber);
