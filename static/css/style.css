@@ -150,3 +150,8 @@ footer hr {
     width: 50%; /* 6 columns */
   }
 }
+
+pre code {
+  padding: 0;
+  background: inherit;
+}
