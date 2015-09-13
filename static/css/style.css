@@ -1,7 +1,11 @@
 html, body {
 	font-size: 100%;
 	overflow-x: hidden;
-	/* Prevent scroll on narrow devices */
+	font-family: 'PT Sans', sans-serif;
+}
+
+#header {
+	margin-top: 35px;
 }
 
 #content #content_header #edit_save_buttons {
@@ -84,6 +88,19 @@ html, body {
 	padding-bottom: 5px;
 }
 
+#markdown_content > h1:first-child {
+	margin-top: 0;
+}
+
+pre code {
+	padding: 0;
+	background: inherit;
+	font-family: 'PT Mono', monospace;
+}
+
+img {
+	max-width: 100%;
+}
 
 /*
  * Menu
@@ -125,9 +142,4 @@ html, body {
 		width: 50%;
 		/* 6 columns */
 	}
-}
-
-pre code {
-	padding: 0;
-	background: inherit;
 }
