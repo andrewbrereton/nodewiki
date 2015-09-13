@@ -1,3 +1,7 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
 html, body {
 	font-size: 100%;
 	overflow-x: hidden;
@@ -102,12 +106,34 @@ img {
 	max-width: 100%;
 }
 
+
 /*
  * Menu
  * --------------------------------------------------
  */
 
+.navbar-toggle {
+	position: absolute;
+	right: 0px;
+	top: -60px;
+	background-color: #F5F5F5;
+	margin-right: 0;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: black;
+}
+
 @media screen and (max-width: 767px) {
+
+	body {
+		margin: 10px;
+	}
+
+	#header {
+		margin-top: 0;
+	}
+
 	.row-offcanvas {
 		position: relative;
 		-webkit-transition: all .25s ease-out;

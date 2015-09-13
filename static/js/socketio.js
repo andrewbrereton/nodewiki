@@ -160,7 +160,7 @@ $(document).ready(function(){
 		});
 
 		function cancelNewFile(){
-			tempFile.remove();
+			if (tempFile) tempFile.remove();
 			tempFile = '';
 			creatingNewFile = false;
 			editingAllowed = true;
