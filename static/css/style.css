@@ -92,8 +92,8 @@ html, body {
 	padding-bottom: 5px;
 }
 
-#markdown_content > h1:first-child {
-	margin-top: 0;
+#markdown_content:first-child {
+	margin-top: 10px;
 }
 
 pre code {
